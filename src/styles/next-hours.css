@@ -1,0 +1,30 @@
+.next-hours-title
+{
+    margin-top: var(--section-gap);
+    font-size: var(--section-title-font-size);
+}
+
+.next-hours
+{
+    display: flex;
+    gap:2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding:12px 24px;
+    border-radius: 8px;
+    width: fit-content;
+    overflow: auto;
+}
+
+
+.hour-info
+{
+    display: flex;
+    flex-direction: column;
+    gap:0.3rem;
+    font-size: 20px;
+}
+
+.hour-info .state-icon
+{
+    width:20px;
+}

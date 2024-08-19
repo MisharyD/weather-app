@@ -1,0 +1,10 @@
+.forecast-title
+{
+    font-size: var(--section-title-font-size);
+    margin-top: var(--section-gap);
+}
+
+.forecast
+{
+
+}

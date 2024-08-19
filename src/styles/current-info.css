@@ -1,0 +1,102 @@
+.current-info-title
+{
+    font-size: var(--section-title-font-size);
+    margin-top: var(--section-gap);
+}
+
+.current-info
+{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    gap:1rem;
+    padding:12px 32px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.location-temp-state-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:1rem;
+}
+
+.location-temp-container
+{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+
+.current-info .state-container
+{
+    display: flex;
+    gap:1rem;
+}
+
+.current-info .state
+{
+    font-size: 36px;
+}
+
+.current-info .state-icon
+{
+    width:60px;
+}
+
+.day-time-container
+{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+
+.current-info .location
+{
+    font-size: 48px;
+}
+
+.current-info .temp-state-container
+{
+    display: flex;
+    gap:1rem;
+}
+
+.location-temp-state-container .temp
+{
+    font-size: 48px;
+}
+
+.current-info .day-time-container
+{
+    display: flex;
+    gap:0.5rem;
+}
+
+.current-info .day-time-container .day
+{
+    font-size: 28px;
+}
+
+.current-info .day-time-container .time
+{
+    font-size: 28px;
+}
+
+.current-info .other-info-container
+{
+    display: flex;
+    gap:0.5rem;
+}
+
+.current-info .other-info-container .humidity
+{
+    font-size: 24px;
+}
+
+.current-info .other-info-container .wind-speed
+{
+    font-size: 24px;
+}

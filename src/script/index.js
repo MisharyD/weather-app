@@ -1,5 +1,8 @@
 import "../styles/index.css"
 import "../styles/reset.css"
+import "../styles/current-info.css"
+import "../styles/next-hours.css"
+import "../styles/forecast.css"
 
 const weather = (function ()
 {

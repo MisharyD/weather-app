@@ -1,18 +1,60 @@
 *
 {
-    font-size: 24px;
-    color: black;
+    color: white;
+}
+
+:root
+{
+    --section-gap:48px;
+    --section-title-font-size:18px;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(13, 12, 39);
 }
 
 .main-container
 {
     display: flex;
-    flex-direction: column;
-    gap:1rem;
-    padding: 24px 240px;
+    flex-direction: column; 
+    width:70%;
+    min-width: 800px;
+    padding: 32px;
 }
 
-.current-info-title
+.form-title-container
 {
-    marg
+    display: flex;
+    justify-content: space-between;
 }
+
+.title-icon-container
+{
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+}
+
+.title
+{
+    font-size: 32px;
+}
+
+.weather-icon
+{
+    width:40px;
+}
+
+.location-input
+{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border: none;
+    outline:none;
+    padding:8px 12px;
+    font-size: 20px;
+}
+
