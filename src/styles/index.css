@@ -1,0 +1,18 @@
+*
+{
+    font-size: 24px;
+    color: black;
+}
+
+.main-container
+{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    padding: 24px 240px;
+}
+
+.current-info-title
+{
+    marg
+}

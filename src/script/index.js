@@ -1,4 +1,7 @@
-const app = (function ()
+import "../styles/index.css"
+import "../styles/reset.css"
+
+const weather = (function ()
 {
     const KEY = "NPZ3AVG6QMT9RU556MX3ULXQL";
 
@@ -98,49 +101,54 @@ const app = (function ()
 
 })()
 
-function init()
+const dom = function ()
 {
-    const form = document.querySelector(".form")
-    form.addEventListener("submit", handleFormSubmit);
+    function init()
+    {
+        const form = document.querySelector(".form")
+        form.addEventListener("submit", handleFormSubmit);
+    }
+    
+    async function handleFormSubmit(e)
+    {
+        e.preventDefault();
+        const data = await app.getLocationData(document.querySelector(".location-input").value);
+    }
+    
+    //returns the corrosponding day for a given string date
+    function getDayOfWeek(date) {
+        const dateObject = new Date(date);
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const dayIndex = dateObject.getDay();
+        return daysOfWeek[dayIndex];
+    }
+
+    return { init }
 }
 
-async function handleFormSubmit(e)
-{
-    e.preventDefault();
-    const data = await app.getLocationData(document.querySelector(".location-input").value);
-    logInfo(data);
-}
+document.addEventListener("DOMContentLoaded", dom.init);
+
 
 function logInfo(data)
-{
-    const today = data.today;
-    const next5 = data.next5;
-
-    console.log("Today:")
-    console.log(`current temp: ${today.currentTemp}, humidity: ${today.humidity}, windspeed: ${today.windspeed}, state: ${today.state}`);
-
-    for(let i=0; i<today.nextHours.length;i++)
     {
-        let hourData = today.nextHours[i];
-        console.log(`at ${hourData.hour}, temp is ${hourData.temp} and it is ${hourData.state} `)
+        const today = data.today;
+        const next5 = data.next5;
+    
+        console.log("Today:")
+        console.log(`current temp: ${today.currentTemp}, humidity: ${today.humidity}, windspeed: ${today.windspeed}, state: ${today.state}`);
+    
+        for(let i=0; i<today.nextHours.length;i++)
+        {
+            let hourData = today.nextHours[i];
+            console.log(`at ${hourData.hour}, temp is ${hourData.temp} and it is ${hourData.state} `)
+        }
+        console.log("\n");
+    
+        console.log("forecast for 5 days:")
+        for(let i=0;i<next5.length;i++)
+        {
+            let dayData = next5[i];
+    
+            console.log(`${getDayOfWeek(dayData.date)} temp: ${dayData.minTemp} to ${dayData.maxTemp}, state: ${dayData.state}`);
+        }
     }
-    console.log("\n");
-
-    console.log("forecast for 5 days:")
-    for(let i=0;i<next5.length;i++)
-    {
-        let dayData = next5[i];
-
-        console.log(`${getDayOfWeek(dayData.date)} temp: ${dayData.minTemp} to ${dayData.maxTemp}, state: ${dayData.state}`);
-    }
-}
-
-//returns the corrosponding day for a given string date
-function getDayOfWeek(date) {
-    const dateObject = new Date(date);
-    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const dayIndex = dateObject.getDay();
-    return daysOfWeek[dayIndex];
-}
-
-document.addEventListener("DOMContentLoaded", init);

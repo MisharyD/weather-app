@@ -6,9 +6,41 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" class="form">
-        <input type="text" class = "location-input" name="location" autocomplete="off">
-        <input type="submit" value="" hidden>
-    </form>
+    <div class="main-container">
+        <form action="" class="form" >
+            <input type="text" class = "location-input" name="location" autocomplete="off">
+            <input type="submit" value="" hidden>
+        </form>
+        <span class="current-info-title">Current:</span>
+        <div class="current-info">
+            <div class="location">Riyadh</div>
+            <div class="temp-state-container">
+                <div class="temp">40</div>
+                <div class="state">Sunny</div>
+            </div>
+            <div class="day-time-container">
+                <div class="day">Sunday</div>
+                <div class="time">8:00pm</div>
+            </div>
+            <div class="other-info-container">
+                <div class="humidity">10</div>
+                <div class="wind-speed">17km/h</div>
+            </div>
+        </div>
+        <div class="next-hours">
+            <div class="hour-info">
+                <div class="hour">8:00pm</div>
+                <div class="temp">40*</div>
+            </div>
+        </div>
+        <span class ="forecast-title">Forecast for 5 days:</span>
+        <div class="forecast">
+            <div class="day-info">
+                <div class="day">Sunday</div>
+                <div class="state">Sunny</div>
+                <div class="minmax-temp">40*</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
