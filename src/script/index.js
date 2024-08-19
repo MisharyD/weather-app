@@ -104,8 +104,24 @@ const weather = (function ()
 
 })()
 
-const dom = function ()
+const dom = (function ()
 {
+    //get containers
+
+    //for current section
+    const location = document.querySelector(".location");
+    const currentTemp = document.querySelector(".current-info-container .temp");
+    const stateContainer = document.querySelector(".state-container");
+    const currentDay = document.querySelector(".current-info-container .day");
+    const currentTime = document.querySelector(".current-info-container .time");
+    const humididty = document.querySelector(".current-info-container .humididty");
+    const windSpeed = document.querySelector(".current-info-container .wind-speed");
+
+    //for next hours section 
+
+    //for forecast section
+    
+
     function init()
     {
         const form = document.querySelector(".form")
@@ -115,8 +131,25 @@ const dom = function ()
     async function handleFormSubmit(e)
     {
         e.preventDefault();
-        const data = await app.getLocationData(document.querySelector(".location-input").value);
+
+        try 
+        {
+            const data = await weather.getLocationData(document.querySelector(".location-input").value);
+        } 
+        catch (error) 
+        {
+            //display message
+            console.log(error);
+        }
     }
+
+    function loadCurrent(data){
+
+    }
+
+    function loadNextHours(data){}
+
+    function loadForecast(data){}
     
     //returns the corrosponding day for a given string date
     function getDayOfWeek(date) {
@@ -127,31 +160,6 @@ const dom = function ()
     }
 
     return { init }
-}
+})()
 
 document.addEventListener("DOMContentLoaded", dom.init);
-
-
-function logInfo(data)
-    {
-        const today = data.today;
-        const next5 = data.next5;
-    
-        console.log("Today:")
-        console.log(`current temp: ${today.currentTemp}, humidity: ${today.humidity}, windspeed: ${today.windspeed}, state: ${today.state}`);
-    
-        for(let i=0; i<today.nextHours.length;i++)
-        {
-            let hourData = today.nextHours[i];
-            console.log(`at ${hourData.hour}, temp is ${hourData.temp} and it is ${hourData.state} `)
-        }
-        console.log("\n");
-    
-        console.log("forecast for 5 days:")
-        for(let i=0;i<next5.length;i++)
-        {
-            let dayData = next5[i];
-    
-            console.log(`${getDayOfWeek(dayData.date)} temp: ${dayData.minTemp} to ${dayData.maxTemp}, state: ${dayData.state}`);
-        }
-    }

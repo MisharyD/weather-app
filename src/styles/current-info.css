@@ -4,7 +4,7 @@
     margin-top: var(--section-gap);
 }
 
-.current-info
+.current-info-container
 {
     display: flex;
     flex-direction: column;
@@ -30,18 +30,18 @@
     gap:1rem;
 }
 
-.current-info .state-container
+.current-info-container .state-container
 {
     display: flex;
     gap:1rem;
 }
 
-.current-info .state
+.current-info-container .state
 {
     font-size: 36px;
 }
 
-.current-info .state-icon
+.current-info-container .state-icon
 {
     width:60px;
 }
@@ -53,12 +53,12 @@
     gap:1rem;
 }
 
-.current-info .location
+.current-info-container .location
 {
     font-size: 48px;
 }
 
-.current-info .temp-state-container
+.current-info-container .temp-state-container
 {
     display: flex;
     gap:1rem;
@@ -69,34 +69,34 @@
     font-size: 48px;
 }
 
-.current-info .day-time-container
+.current-info-container .day-time-container
 {
     display: flex;
     gap:0.5rem;
 }
 
-.current-info .day-time-container .day
+.current-info-container .day-time-container .day
 {
     font-size: 28px;
 }
 
-.current-info .day-time-container .time
+.current-info-container .day-time-container .time
 {
     font-size: 28px;
 }
 
-.current-info .other-info-container
+.current-info-container .other-info-container
 {
     display: flex;
     gap:0.5rem;
 }
 
-.current-info .other-info-container .humidity
+.current-info-container .other-info-container .humidity
 {
     font-size: 24px;
 }
 
-.current-info .other-info-container .wind-speed
+.current-info-container .other-info-container .wind-speed
 {
     font-size: 24px;
 }

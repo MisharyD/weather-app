@@ -6,5 +6,24 @@
 
 .forecast
 {
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    padding:12px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: fit-content;
+}
 
+.day-info
+{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    font-size: 32px;
+}
+
+.day-info .state-icon
+{
+    width:30px;
 }
