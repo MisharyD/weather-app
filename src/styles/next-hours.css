@@ -4,19 +4,17 @@
     font-size: var(--section-title-font-size);
 }
 
-.next-hours
+.next-hours-container
 {
     display: flex;
-    gap:2rem;
+    gap:3rem;
     background-color: rgba(255, 255, 255, 0.1);
     padding:12px 24px;
     border-radius: 8px;
     width: fit-content;
-    overflow: auto;
 }
 
-
-.hour-info
+.hour-info-container
 {
     display: flex;
     flex-direction: column;
@@ -24,7 +22,7 @@
     font-size: 20px;
 }
 
-.hour-info .state-icon
+.hour-info-container .state-icon
 {
-    width:20px;
+    width:35px;
 }

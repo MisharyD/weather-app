@@ -20,46 +20,51 @@
                 </svg>
             </div>
         </div>
+        <div class="invalid-message hidden">Could not find location, please try again.</div>
 
         <span class="current-info-title">Current</span>
         <div class="current-info-container">
             <div class="location-temp-state-container">
                 <div class="location-temp-container">
-                    <div class="location">Riyadh</div>
-                    <div class="temp">40*</div>
+                    <div class="location"></div>
+                    <div class="temp"></div>
                 </div>
                 <div class="state-container">
-                    <img src="./assets/images/sunny.svg" class="state-icon" alt="image">
+                    <img src="assets/images/weather-svgrepo-com.svg" class="state-icon" alt="image">
                 </div>
             </div>
             <div class="day-time-container">
-                <div class="day">Sunday</div>
-                <div class="time">8:00pm</div>
+                <div class="day"></div>
+                <div class="time"></div>
             </div>
             <div class="other-info-container">
-                <div class="humidity">H: 10*</div>
-                <div class="wind-speed">WS: 17km/h</div>
+                <div class="humidity"></div>
+                <div class="wind-speed"></div>
             </div>   
         </div>
 
+        <!--It is outside so that in javascript the next hours container can be cleared without removing this structure-->
+        <div class="hour-info-container structure hidden">
+            <div class="hour"></div>
+            <img src="./assets/images/sunny.svg" class="state-icon" alt="image">
+            <div class="temp"></div>
+        </div>
+
         <div class="next-hours-title">Next Hours</div>
-        <div class="next-hours">
-            <div class="hour-info">
-                <div class="hour">8:00pm</div>
+        <div class="next-hours-container">
+        </div>
+
+        <!--It is outside so that in javascript the next hours container can be cleared without removing this structure-->
+        <div class="day-info structure hidden">
+            <div class="day"></div>
+            <div class="state-container">
                 <img src="./assets/images/sunny.svg" class="state-icon" alt="image">
-                <div class="temp">40*</div>
             </div>
+            <div class="minmax-temp"></div>
         </div>
 
         <span class ="forecast-title">Forecast for 5 days:</span>
-        <div class="forecast">
-            <div class="day-info">
-                <div class="day">Sunday</div>
-                <div class="state-container">
-                    <img src="./assets/images/sunny.svg" class="state-icon" alt="image">
-                </div>
-                <div class="minmax-temp">35* - 45*</div>
-            </div>
+        <div class="forecast-container">
         </div>
     </div>
 </body>

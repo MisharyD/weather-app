@@ -24,6 +24,11 @@ body
     min-width: 800px;
     padding: 32px;
 }
+.invalid-message
+{
+    margin-top: 8px;
+    color: red;
+}
 
 .form-title-container
 {
