@@ -24,8 +24,10 @@ const weather = (function ()
             {
             mode: 'cors'
         });
-
-        return data.json().then((respone) => processData(respone));
+        const json = await data.json();
+        
+        const processed = processData(json);
+        return processed;
     }
     
     function processData(data)
