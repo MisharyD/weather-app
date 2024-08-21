@@ -218,6 +218,7 @@ const dom = (function ()
     {
         const days = data.forecast
 
+        forecastContainer.textContent ="";
         for(let i =0; i<days.length;i++)
         {
             //get info for
