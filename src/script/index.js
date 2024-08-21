@@ -148,7 +148,6 @@ const dom = (function ()
         loadCurrent(data);
         loadNextHours(data);
         loadForecast(data);
-        
     }
     
     async function handleFormSubmit(e)

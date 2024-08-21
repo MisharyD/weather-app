@@ -15,7 +15,11 @@
     max-width: 800px;
     flex: 1 0 auto;
     overflow: auto;
-    
+}
+
+.next-hours-container::-webkit-scrollbar
+{
+    scrollbar-color: red;
 }
 
 .hour-info-container
