@@ -12,6 +12,10 @@
     padding:12px 24px;
     border-radius: 8px;
     width: fit-content;
+    max-width: 800px;
+    flex: 1 0 auto;
+    overflow: auto;
+    
 }
 
 .hour-info-container

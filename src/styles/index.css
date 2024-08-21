@@ -21,7 +21,6 @@ body
     display: flex;
     flex-direction: column; 
     width:70%;
-    min-width: 800px;
     padding: 32px;
 }
 .invalid-message
