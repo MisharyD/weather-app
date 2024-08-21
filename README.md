@@ -6,4 +6,4 @@ This was just a practise to use APIs and fetch with promises.
 
 ### Some improvement that can be made
 - Add dynamic background with the current weather and time.
-- code desgin and naming could be better but since I though I will never come back to it I didnt bother.
+- code desgin and naming could be better but since I thought I will never come back to it I didnt bother.
